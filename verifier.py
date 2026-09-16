@@ -13,11 +13,17 @@ from pathlib import Path
 RACINE = Path(__file__).parent
 DOSSIER_LECONS = RACINE / "lecons"
 
-VERT = "\033[32m"
-ROUGE = "\033[31m"
-GRIS = "\033[90m"
-GRAS = "\033[1m"
-FIN = "\033[0m"
+# Les couleurs ne s'affichent pas partout (vieux terminal Windows, sortie
+# redirigée vers un fichier). On les désactive plutôt que d'afficher des
+# caractères bizarres.
+if sys.stdout.isatty():
+    VERT = "\033[32m"
+    ROUGE = "\033[31m"
+    GRIS = "\033[90m"
+    GRAS = "\033[1m"
+    FIN = "\033[0m"
+else:
+    VERT = ROUGE = GRIS = GRAS = FIN = ""
 
 
 def lecons(filtre=None):

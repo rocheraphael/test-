@@ -4,7 +4,12 @@ Ce dépôt est un parcours d'apprentissage. Il ne contient pas un cours à lire
 passivement : chaque leçon te demande d'écrire du code, et une commande te dit
 si ce que tu as écrit fonctionne vraiment.
 
-## Démarrage en 30 secondes
+## Démarrage
+
+Si tu n'as jamais ouvert de terminal, commence par **`DEMARRER.md`** : il
+explique comment installer Python, récupérer ce dossier et lancer une commande.
+
+Une fois que c'est fait, tout part d'ici :
 
 ```bash
 python3 verifier.py
