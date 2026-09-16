@@ -44,6 +44,53 @@ Les deux sources officielles sont **F-Droid** et **GitHub** :
 Android te demandera d'autoriser l'installation depuis une source inconnue.
 C'est normal pour une application hors Play Store.
 
+### Quel fichier APK choisir sur GitHub
+
+La page des releases propose plusieurs fichiers. Ils portent des noms de cette
+forme :
+
+```
+termux-app_v0.118.3+github-debug_universal.apk
+termux-app_v0.118.3+github-debug_arm64-v8a.apk
+termux-app_v0.118.3+github-debug_armeabi-v7a.apk
+termux-app_v0.118.3+github-debug_x86_64.apk
+```
+
+Ce qui change à la fin, c'est le **processeur** visé. Un téléphone ne sait
+exécuter que le code compilé pour le sien.
+
+**Prends celui qui finit par `universal`.** Il contient le code de toutes les
+architectures : il fonctionne partout, sans que tu aies à savoir quel processeur
+tu as. Il pèse environ deux fois plus lourd, ce qui est parfaitement indifférent
+pour une application qu'on installe une fois.
+
+Si tu préfères le fichier le plus léger : `arm64-v8a` est le bon choix pour
+pratiquement tous les téléphones vendus depuis 2016. Les autres ne te concernent
+pas — `armeabi-v7a` vise les vieux appareils 32 bits, `x86` et `x86_64` les
+émulateurs et quelques tablettes Intel.
+
+Deux détails qui inquiètent à tort :
+
+- Le mot **`debug`** dans le nom est normal. Ce n'est pas une version bancale :
+  c'est la façon dont Termux signe ses paquets distribués hors Play Store.
+- Si tu vois des variantes **`apt-android-5`** et **`apt-android-7`** (sur des
+  versions plus anciennes), prends `android-7` : elle vise Android 7 et
+  au-delà, donc tout téléphone actuel.
+
+### Un choix qui vous engage : F-Droid ou GitHub, pas les deux
+
+Android refuse de mettre à jour une application avec un fichier signé par une
+autre clé. Or les versions F-Droid et GitHub de Termux sont signées
+différemment. Conséquence : pour passer de l'une à l'autre, il faut désinstaller
+d'abord — **et la désinstallation efface tout ton dossier Termux**, code compris.
+
+Décide donc maintenant et n'en change plus. Mon conseil pour toi : **F-Droid**,
+parce que l'application F-Droid gère les mises à jour toute seule, alors qu'avec
+GitHub tu devras revenir télécharger un APK à la main.
+
+Dans les deux cas, pense à garder ton travail sur GitHub (ou ailleurs) plutôt
+que seulement dans Termux. C'est vrai de tout code, sur toute machine.
+
 ### La première mise en route
 
 Ouvre Termux et tape, une ligne à la fois (Entrée après chacune) :
