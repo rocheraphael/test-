@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+notes.txt
+notes_exemple.txt
+essai.txt
