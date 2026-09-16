@@ -3,6 +3,9 @@
 Tu n'as jamais ouvert de terminal ? C'est le bon moment. Compte vingt minutes
 pour cette page, une seule fois.
 
+> **Sur téléphone Android ?** Va directement à `ANDROID.md`. Tout ce parcours
+> fonctionne depuis un téléphone, mais les étapes sont différentes.
+
 Il y a trois choses à mettre en place, dans cet ordre :
 
 1. **Python** sur ton ordinateur
@@ -54,6 +57,10 @@ Deux façons de le rapatrier. **La première suffit largement pour commencer.**
 
 1. Ouvre ce lien direct :
    <https://github.com/rocheraphael/test-/archive/refs/heads/claude/python-ai-assisted-learning-vbxaz3.zip>
+
+   > Ce dépôt est **privé** : le lien ne fonctionne que dans un navigateur où tu
+   > es déjà connecté à ton compte GitHub. Si tu obtiens une page « 404 », c'est
+   > qu'il faut te connecter d'abord.
 2. Décompresse le fichier `.zip` obtenu (double-clic sur Mac, clic droit →
    « Extraire tout » sur Windows).
 3. Déplace le dossier obtenu là où tu veux — par exemple dans `Documents`.
@@ -75,6 +82,11 @@ Ensuite, dans un terminal :
 ```
 git clone -b claude/python-ai-assisted-learning-vbxaz3 https://github.com/rocheraphael/test-.git
 ```
+
+> Le dépôt étant privé, `git` va demander une authentification. GitHub n'accepte
+> plus le mot de passe du compte : il faut un *personal access token*, ou rendre
+> le dépôt public. Voir la section « Récupérer le code » de `ANDROID.md`, qui
+> détaille les deux, et vaut aussi pour un ordinateur.
 
 Un dossier `test-` apparaît là où tu étais. Pour récupérer mes modifications
 plus tard, il suffira d'un `git pull` depuis ce dossier.

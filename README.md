@@ -8,6 +8,7 @@ si ce que tu as écrit fonctionne vraiment.
 
 Si tu n'as jamais ouvert de terminal, commence par **`DEMARRER.md`** : il
 explique comment installer Python, récupérer ce dossier et lancer une commande.
+Depuis un téléphone Android, c'est **`ANDROID.md`**.
 
 Une fois que c'est fait, tout part d'ici :
 
