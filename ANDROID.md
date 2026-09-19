@@ -219,9 +219,44 @@ lettre.
 
 Pour l'indentation, la touche **Tab** de la rangée Termux fonctionne dans nano.
 
-Une alternative plus douce si nano te rebute : `pkg install micro`, puis
-`micro fichier.py`. Cet éditeur se comporte comme une application normale —
-`Ctrl + S` enregistre, `Ctrl + Q` quitte.
+### micro, nettement plus confortable
+
+`nano` dépanne, mais pour écrire du Python sur un écran de téléphone, installe
+plutôt `micro` :
+
+```
+pkg install micro
+```
+
+Il apporte trois choses qui comptent vraiment ici :
+
+- **Le tactile fonctionne.** Tu poses le doigt où tu veux écrire, et le curseur
+  y va. Plus besoin de marteler les flèches pour remonter de douze lignes.
+- **La coloration syntaxique.** Les mots-clés, les chaînes et les commentaires
+  prennent des couleurs distinctes. Une chaîne non fermée se repère d'un coup
+  d'œil, au lieu de se découvrir à l'exécution.
+- **Les raccourcis habituels** : `Ctrl + S` enregistre, `Ctrl + Q` quitte,
+  `Ctrl + Z` annule, `Ctrl + F` cherche.
+
+Règle-le une fois pour toutes pour Python et pour un écran étroit :
+
+```
+mkdir -p ~/.config/micro
+echo '{"tabstospaces": true, "tabsize": 4, "softwrap": true}' > ~/.config/micro/settings.json
+```
+
+- `tabstospaces` : la touche Tab insère des espaces, pas un caractère de
+  tabulation. En Python, mélanger les deux provoque une `TabError` — et comme
+  les deux sont invisibles, on peut chercher longtemps.
+- `tabsize: 4` : quatre espaces par niveau, la convention Python.
+- `softwrap` : les lignes trop longues se replient au lieu de disparaître à
+  droite de l'écran. Indispensable sur téléphone.
+
+Ensuite, pour travailler :
+
+```
+micro lecons/01_variables/exercice.py
+```
 
 ## Les autres options, en bref
 
